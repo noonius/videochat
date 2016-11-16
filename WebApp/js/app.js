@@ -251,7 +251,7 @@ function createCall() {
     currentCall.hangup();
   });
   log("Calling to "+document.getElementById('phonenum').value);
-  outboundCall = currentCall = voxAPI.call(document.getElementById('phonenum').value, true, "TEST CUSTOM DATA", {"X-DirectCall": "true"});
+  outboundCall = currentCall = voxAPI.call(document.getElementById('phonenum').value, true, "TEST CUSTOM DATA");
   currentCall.addEventListener(VoxImplant.CallEvents.Connected, onCallConnected);
   currentCall.addEventListener(VoxImplant.CallEvents.Disconnected, onCallDisconnected);
   currentCall.addEventListener(VoxImplant.CallEvents.Failed, onCallFailed);
